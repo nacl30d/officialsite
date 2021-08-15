@@ -80,7 +80,7 @@ childsrc = ["'self'"]
 fontsrc = ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net/"]
 formaction = ["'self'"]
 framesrc = ["'self'", "https://hatenablog-parts.com"]
-imgsrc = ["'self'", "*.gravatar.com"]
+imgsrc = ["'self'", "*.gravatar.com", "*.booklog.jp", "*.media-amazon.com"]
 objectsrc = ["'none'"]
 stylesrc = [
   "'self'",
@@ -88,7 +88,13 @@ stylesrc = [
   "https://fonts.googleapis.com/",
   "https://cdn.jsdelivr.net/"
 ]
-scriptsrc = ["'self'", "'unsafe-inline'", "https://www.google-analytics.com", "https://www.googletagmanager.com"]
+scriptsrc = [
+  "'self'",
+  "'unsafe-inline'",
+  "https://www.google-analytics.com",
+  "https://www.googletagmanager.com",
+  "*.booklog.jp"
+]
 prefetchsrc = ["'self'"]
 # connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
 connectsrc = ["'self'", "https://www.google-analytics.com"]
@@ -155,6 +161,11 @@ name = "Projects"
 weight = 3
 url = "projects/"
 
+[[languages.ja.menu.main]]
+name = "Bookshelf"
+weight = 4
+url = "bookshelves/"
+
 # [[languages.ja.menu.main]]
 # name = "Contact"
 # weight = 5
@@ -185,6 +196,11 @@ url = "posts/"
 name = "Projects"
 weight = 3
 url = "projects/"
+
+[[languages.en.menu.main]]
+name = "Bookshelf"
+weight = 4
+url = "bookshelves/"
 
 # [[languages.en.menu.main]]
 # name = "Contact"
