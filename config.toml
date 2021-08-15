@@ -43,7 +43,7 @@ enableTwemoji = false
 # Custom CSS
 customCSS = []
 # Custom SCSS
-customSCSS = []
+customSCSS = ["scss/styles.scss"]
 # Custom JS
 customJS = []
 

@@ -1,0 +1,14 @@
+<li>
+  <div class="project">
+      <div class="project-inner">
+        <div class="project-image">
+          <img src="{{ .Params.ExternalLink | default .RelPermalink }}{{ .Params.thumbnail }}" title="{{ .Title }}" >
+        </div>
+        <div class="project-content">
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Params.description }}</p>
+        </div>
+      </div>
+    <a href="{{.Params.ExternalLink | default .RelPermalink }}"></a>
+  </div>
+</li>
