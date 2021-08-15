@@ -1,7 +1,6 @@
 ---
 title: CourseSpace
 date: 2020-03-03
-slug: coursespace
 thumbnail: "images/cs-main_view.en.png"
 description: "Visualization tool of the various course-taking patterns on interdisciplinary departments."
 tags: ["application", "academic"]

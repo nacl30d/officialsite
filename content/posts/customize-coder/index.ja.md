@@ -1,7 +1,6 @@
 ---
 title: "hugoのテーマcoderを自分好みにカスタマイズ"
 date: 2019-01-02T15:56:08+09:00
-slug: "customize-coder"
 tags: ["develop", "hugo"]
 draft: true
 ---

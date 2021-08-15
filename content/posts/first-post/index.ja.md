@@ -1,7 +1,6 @@
 ---
 title: "はじめての投稿"
 date: 2018-12-29T23:22:20+09:00
-slug: "first-post"
 tags: ["develop", "hugo"]
 draft: false
 ---

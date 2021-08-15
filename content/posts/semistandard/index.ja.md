@@ -1,8 +1,7 @@
 ---
 date: 2020-04-20T18:48:48+09:00
 title: "EmacsでJavasctipt Semistandardを使う"
-slug: "javascript-semistandard"
-tags: ["develop", "ldap", "server"]
+tags: ["develop", "javascript", "emacs"]
 draft: false
 ---
 

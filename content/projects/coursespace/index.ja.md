@@ -1,7 +1,6 @@
 ---
 title: CourseSpace
 date: 2020-03-03
-slug: coursespace
 thumbnail: "images/cs-main_view.png"
 description: "文理融合系学部における多様な履修パターンを可視化するツール"
 tags: ["application", "academic"]

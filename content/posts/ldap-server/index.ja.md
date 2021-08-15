@@ -1,7 +1,6 @@
 ---
 title: "LDAPサーバの構築"
 date: 2019-08-30T14:40:40+09:00
-slug:  "ldap-server"
 tags: ["develop", "ldap", "server"]
 draft: false
 ---

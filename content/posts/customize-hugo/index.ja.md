@@ -1,7 +1,6 @@
 ---
 title: "hugoの設定を自分好みにカスタマイズ"
 date: 2019-01-02T18:35:45+09:00
-slug: "customize-hugo"
 tags: ["develop", "hugo"]
 draft: true
 ---
