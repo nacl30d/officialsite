@@ -140,10 +140,10 @@ url = "https://www.linkedin.com/in/nacl30d/"
 [languages.ja]
 languageName = ":jp:"
 
-[[languages.ja.menu.main]]
-name = "About"
-weight = 1
-url = "about/"
+# [[languages.ja.menu.main]]
+# name = "About"
+# weight = 1
+# url = "about/"
 
 [[languages.ja.menu.main]]
 name = "Blog"
@@ -171,10 +171,10 @@ languageName = ":us:"
 # keywords = ""
 # footerContent = ""
 
-[[languages.en.menu.main]]
-name = "About"
-weight = 1
-url = "about/"
+# [[languages.en.menu.main]]
+# name = "About"
+# weight = 1
+# url = "about/"
 
 [[languages.en.menu.main]]
 name = "Blog"
