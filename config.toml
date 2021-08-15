@@ -155,10 +155,10 @@ name = "Projects"
 weight = 3
 url = "projects/"
 
-[[languages.ja.menu.main]]
-name = "Contact"
-weight = 5
-url = "contact/"
+# [[languages.ja.menu.main]]
+# name = "Contact"
+# weight = 5
+# url = "contact/"
 
 [languages.en]
 languageName = ":us:"
@@ -186,7 +186,7 @@ name = "Projects"
 weight = 3
 url = "projects/"
 
-[[languages.en.menu.main]]
-name = "Contact"
-weight = 5
-url = "contact/"
+# [[languages.en.menu.main]]
+# name = "Contact"
+# weight = 5
+# url = "contact/"
