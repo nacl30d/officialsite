@@ -18,5 +18,8 @@ jobs:
     - name: Resolve Dependencies
       run: npm ci
 
+    - name: Check code
+      run: npm run lint
+
     - name: Build
       run: npm run build

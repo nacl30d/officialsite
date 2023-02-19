@@ -7,7 +7,7 @@
 		"lint:fix": "prettier --write src && eslint --fix src",
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "prettier --check src && eslint src && astro check && tsc --noEmit && astro build",
+		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
 		"prepare": "husky install"
