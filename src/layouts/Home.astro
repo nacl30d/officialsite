@@ -1,0 +1,66 @@
+---
+import crypto from 'crypto';
+const md5 = (contents: string) => crypto.createHash('md5').update(contents).digest('hex');
+
+type Social = {
+    name: string;
+    slug: string;
+    url: string;
+    weight: number;
+};
+
+export interface Props {
+    gravatar: {
+        id: string;
+    };
+    author: string;
+    descriptions: Array<string>;
+    socials: Array<Social>;
+}
+
+const props = Astro.props;
+---
+
+<section id="home" class="mx-4 my-auto flex w-full items-center justify-center">
+    <div class="text-center">
+        <div class="m-4">
+            <img
+                class="inline w-32 rounded-full md:w-52"
+                src={`https://www.gravatar.com/avatar/${md5(props.gravatar.id)}?s=240&d=mp`}
+                alt="gravatar"
+            />
+        </div>
+
+        <h1 class="m-4 text-3xl font-semibold md:text-3xl">
+            {props.author}
+        </h1>
+
+        <h2 class="m-4 text-xl font-semibold md:text-2xl">
+            {
+                props.descriptions.map((description) => (
+                    <>
+                        {description}
+                        <br />
+                    </>
+                ))
+            }
+        </h2>
+
+        <div class="flex justify-center">
+            {
+                props.socials
+                    .sort((social) => social.weight)
+                    .map((social) => (
+                        <div class="m-4 box-content h-8 w-8">
+                            <a href={social.url} aria-label={social.name} target="_blank">
+                                <img
+                                    src={`https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/${social.slug}.svg`}
+                                    alt={social.slug}
+                                />
+                            </a>
+                        </div>
+                    ))
+            }
+        </div>
+    </div>
+</section>
