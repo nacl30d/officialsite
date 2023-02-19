@@ -1,0 +1,29 @@
+---
+import crypto from 'crypto';
+import { site, about } from '../config.json';
+
+export type OgpType = 'website' | 'blog' | 'article';
+
+interface Props {
+    type: OgpType;
+    title: string;
+    imageUrl?: string;
+}
+
+const props = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.url);
+
+const md5 = (contents: string) => crypto.createHash('md5').update(contents).digest('hex');
+const defaultImageUrl = `https://www.gravatar.com/avatar/${md5(about.gravatar.id)}?s=240&d=mp`;
+---
+
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:type" content={props.type} />
+<meta property="og:title" content={props.title} />
+<meta property="og:description" content="" />
+<meta property="og:site_name" content={site.title} />
+<meta property="og:image" content={props.imageUrl || defaultImageUrl} />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content={`@${site.twitter.id}`} />
