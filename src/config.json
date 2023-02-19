@@ -1,7 +1,10 @@
 {
     "site": {
         "title": "NaCl30d",
-        "copyright": "© 2023 Daiki Shiozawa"
+        "copyright": "© 2023 Daiki Shiozawa",
+        "googleAnalytics": {
+            "measurementId": "G-RL7D4SSB2K"
+        }
     },
     "about": {
         "gravatar": {
