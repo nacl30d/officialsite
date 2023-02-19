@@ -1,18 +1,23 @@
-# Astro Starter Kit: Basics
+<p align="center">
+  <img src="https://www.gravatar.com/avatar/ad00edc222a0a7329a429649b88bc6e7?s=240&d=mp" style="border-radius: 50%" alt="Icon" width="128" height="128">
+</p>
 
-```
-npm create astro@latest -- --template basics
-```
+<h1 align="center">nacl30d.com</h1>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+<p align="center">
+    <a href="https://github.com/nacl30d/officialsite/actions">
+        <img src="https://github.com/nacl30d/officialsite/actions/workflows/main.yaml/badge.svg" alt="GitHub Actions">
+    </a>
+</p>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<p align="center">
+  My official website.
+</p>
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+<br>
 
-
-## 🚀 Project Structure
+## Powered by Astro
+### 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
@@ -35,8 +40,7 @@ Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
 Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
+### 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -49,6 +53,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
