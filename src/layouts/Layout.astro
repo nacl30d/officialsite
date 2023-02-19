@@ -2,15 +2,12 @@
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import GoogleAnalytics from './GoogleAnalytics.astro';
+import { site } from '../config.json';
 export interface Props {
     title: string;
-    copyright: string;
-    googleAnalytics?: {
-        measurementId: string;
-    };
 }
 
-const { title, copyright, googleAnalytics } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -20,14 +17,14 @@ const { title, copyright, googleAnalytics } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        {googleAnalytics && <GoogleAnalytics measurementId={googleAnalytics.measurementId} />}
+        {site.googleAnalytics && <GoogleAnalytics measurementId={site.googleAnalytics.measurementId} />}
         <title>{title}</title>
     </head>
     <body class="flex h-screen w-full flex-col bg-zinc-50 text-zinc-900">
-        <Header title={title} />
+        <Header title={site.title} />
         <main class="flex flex-auto">
             <slot />
         </main>
-        <Footer copyright={copyright} />
+        <Footer copyright={site.copyright} />
     </body>
 </html>
