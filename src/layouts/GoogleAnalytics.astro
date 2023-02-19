@@ -7,13 +7,13 @@ const { measurementId } = Astro.props;
 ---
 
 <!-- Google tag (gtag.js) -->
-<script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
-<script type="text/javascript">
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
+<script is:inline data-measurementId={measurementId}>
+    measurementId = document.querySelector('script[data-measurementId]').getAttribute('data-measurementId');
     window.dataLayer = window.dataLayer || [];
     function gtag() {
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
-
-    gtag('config', { measurementId });
+    gtag('config', measurementId);
 </script>
