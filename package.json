@@ -3,11 +3,11 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"lint": "eslint src && astro check && tsc --noEmit",
-		"lint:fix": "eslint --fix src",
+		"lint": "prettier --check src && eslint src && astro check && tsc --noEmit",
+		"lint:fix": "prettier --write src && eslint --fix src",
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "eslint src && astro check && tsc --noEmit && astro build",
+		"build": "prettier --check src && eslint src && astro check && tsc --noEmit && astro build",
 		"preview": "astro preview",
 		"astro": "astro"
 	},
@@ -21,6 +21,9 @@
 		"eslint": "^8.34.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-astro": "^0.23.0",
-		"eslint-plugin-jsx-a11y": "^6.7.1"
+		"eslint-plugin-jsx-a11y": "^6.7.1",
+		"prettier": "^2.8.4",
+		"prettier-plugin-astro": "^0.8.0",
+		"prettier-plugin-tailwindcss": "^0.2.3"
 	}
 }
