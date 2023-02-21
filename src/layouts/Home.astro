@@ -23,19 +23,18 @@ export interface Props {
 
 const props = Astro.props;
 
-const authorImageSrc = (props.avatarUrl && props.gravatar)
-    ? props.avatarUrl
-    : props.gravatar ? `https://www.gravatar.com/avatar/${md5(props.gravatar.id)}?s=240&d=mp` : '';
+const authorImageSrc =
+    props.avatarUrl && props.gravatar
+        ? props.avatarUrl
+        : props.gravatar
+        ? `https://www.gravatar.com/avatar/${md5(props.gravatar.id)}?s=240&d=mp`
+        : '';
 ---
 
 <section id="home" class="flex w-full items-center justify-center text-center">
     <Container>
         <div class="m-4">
-            <img
-                class="inline w-32 rounded-full sm:w-52"
-                src={authorImageSrc}
-                alt="gravatar"
-            />
+            <img class="inline w-32 rounded-full sm:w-52" src={authorImageSrc} alt="gravatar" />
         </div>
 
         <h1 class="m-4 text-3xl font-semibold md:text-3xl">
