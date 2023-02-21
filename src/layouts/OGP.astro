@@ -15,7 +15,9 @@ const props = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.url);
 
 const md5 = (contents: string) => crypto.createHash('md5').update(contents).digest('hex');
-const defaultImageUrl = `https://www.gravatar.com/avatar/${md5(about.gravatar.id)}?s=240&d=mp`;
+const defaultImageUrl = (about.avatarUrl && about.gravatar)
+    ? new URL(about.avatarUrl, Astro.url)
+    : about.gravatar ? `https://www.gravatar.com/avatar/${md5(about.gravatar.id)}?s=240&d=mp` : '';
 ---
 
 <meta property="og:url" content={canonicalUrl} />

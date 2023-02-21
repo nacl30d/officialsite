@@ -13,6 +13,7 @@
         "gravatar": {
             "id": "me@nacl30d.com"
         },
+        "avatarUrl": "/images/author.jpg",
         "author": "Daiki Shiozawa",
         "descriptions": ["Web Application Developer"],
         "socials": [
