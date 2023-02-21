@@ -1,4 +1,5 @@
 ---
+import Container from '../components/basics/Container.astro';
 interface Props {
     copyright: string;
 }
@@ -7,9 +8,9 @@ const props = Astro.props;
 ---
 
 <footer class="mb-2 w-full text-center leading-4">
-    <div class="my-2 mx-auto max-w-screen-md px-4">
+    <Container>
         <p class="text-lg font-light">
             {props.copyright}
         </p>
-    </div>
+    </Container>
 </footer>

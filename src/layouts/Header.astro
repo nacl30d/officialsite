@@ -1,4 +1,6 @@
 ---
+import Container from '../components/basics/Container.astro';
+
 interface Props {
     title: string;
 }
@@ -7,9 +9,9 @@ const props = Astro.props;
 ---
 
 <header class="h-16 w-full">
-    <div class="my-2 mx-auto max-w-screen-md px-4">
+    <Container>
         <a href="/" class="text-lg font-medium uppercase tracking-widest">
             {props.title}
         </a>
-    </div>
+    </Container>
 </header>
