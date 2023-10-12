@@ -1,6 +1,6 @@
 name: CI
 
-on: 
+on:
   - push
   - pull_request
 
@@ -9,17 +9,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+    - uses: oven-sh/setup-bun@v1
 
     - name: Resolve Dependencies
-      run: npm ci
+      run: bun install --frozen-lockfile
+      env:
+        HUSKY: 0
 
     - name: Check code
-      run: npm run lint
+      run: bun run lint
 
     - name: Build
-      run: npm run build
+      run: bun run build
