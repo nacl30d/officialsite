@@ -16,3 +16,6 @@ overrides:
     - files: '*.astro'
       options:
           parser: 'astro'
+    - files: '*.yaml'
+      options:
+          tabWidth: 2
