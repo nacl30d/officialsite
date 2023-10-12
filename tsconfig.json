@@ -1,8 +1,6 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "types": [
-      "node",
-    ]
-  }
+    "extends": "astro/tsconfigs/strict",
+    "compilerOptions": {
+        "types": ["node"]
+    }
 }

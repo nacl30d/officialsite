@@ -8,14 +8,14 @@ singleQuote: true
 endOfLine: lf
 
 plugins:
-    - 'prettier-plugin-astro'
-    - 'prettier-plugin-tailwindcss'
+  - 'prettier-plugin-astro'
+  - 'prettier-plugin-tailwindcss'
 pluginSearchDirs: false
 
 overrides:
-    - files: '*.astro'
-      options:
-          parser: 'astro'
-    - files: '*.yaml'
-      options:
-          tabWidth: 2
+  - files: '*.astro'
+    options:
+      parser: 'astro'
+  - files: '*.yaml'
+    options:
+      tabWidth: 2
