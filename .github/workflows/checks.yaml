@@ -1,13 +1,15 @@
-name: CI
+---
+name: checks
 
 on:
-  - push
-  - pull_request
+  pull_request: ~
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -20,6 +22,18 @@ jobs:
 
       - name: Check code
         run: bun run lint
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v1
+
+      - name: Resolve Dependencies
+        run: bun install --frozen-lockfile
+        env:
+          HUSKY: 0
 
       - name: Build
         run: bun run build
