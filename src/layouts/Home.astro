@@ -1,34 +1,35 @@
 ---
-import Container from '../components/basics/Container.astro';
+import crypto, { getRandomValues } from "node:crypto";
+import Container from "../components/basics/Container.astro";
 
-import crypto, { getRandomValues } from 'crypto';
-const md5 = (contents: string) => crypto.createHash('md5').update(contents).digest('hex');
+const md5 = (contents: string) =>
+  crypto.createHash("md5").update(contents).digest("hex");
 
 type Social = {
-    name: string;
-    slug: string;
-    url: string;
-    weight: number;
+  name: string;
+  slug: string;
+  url: string;
+  weight: number;
 };
 
 export interface Props {
-    gravatar?: {
-        id: string;
-    };
-    avatarUrl?: string;
-    author: string;
-    descriptions: Array<string>;
-    socials: Array<Social>;
+  gravatar?: {
+    id: string;
+  };
+  avatarUrl?: string;
+  author: string;
+  descriptions: Array<string>;
+  socials: Array<Social>;
 }
 
 const props = Astro.props;
 
 const authorImageSrc =
-    props.avatarUrl && props.gravatar
-        ? props.avatarUrl
-        : props.gravatar
-        ? `https://www.gravatar.com/avatar/${md5(props.gravatar.id)}?s=240&d=mp`
-        : '';
+  props.avatarUrl && props.gravatar
+    ? props.avatarUrl
+    : props.gravatar
+      ? `https://www.gravatar.com/avatar/${md5(props.gravatar.id)}?s=240&d=mp`
+      : "";
 ---
 
 <section id="home" class="flex w-full items-center justify-center text-center">

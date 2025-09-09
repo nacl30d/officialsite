@@ -1,27 +1,27 @@
 {
-    "name": "officialsite",
-    "type": "module",
-    "version": "0.0.1",
-    "scripts": {
-        "check": "biome check &&  astro check && tsc --noEmit",
-        "fix": "biome check --fix --unsafe",
-        "dev": "astro dev",
-        "start": "astro dev",
-        "build": "astro build",
-        "preview": "astro preview",
-        "astro": "astro",
-        "prepare": "husky install"
-    },
-    "packageManager": "pnpm@10.15.0",
-    "dependencies": {
-        "@astrojs/tailwind": "^3.0.1",
-        "astro": "^2.0.13",
-        "tailwindcss": "^3.2.7"
-    },
-    "devDependencies": {
-        "@biomejs/biome": "^2.2.3",
-        "@types/node": "^18.14.0",
-        "husky": "^8.0.3",
-        "lint-staged": "^13.1.2"
-    }
+  "name": "officialsite",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "check": "biome check &&  astro check && tsc --noEmit",
+    "fix": "biome check --fix --unsafe",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prepare": "husky install"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "@astrojs/tailwind": "^3.0.1",
+    "astro": "^2.0.13",
+    "tailwindcss": "^3.2.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.3",
+    "@types/node": "^18.14.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2"
+  }
 }
