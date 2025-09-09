@@ -21,7 +21,7 @@ jobs:
           HUSKY: 0
 
       - name: Check code
-        run: pnpm run lint
+        run: pnpm run check
 
   build:
     runs-on: ubuntu-latest
