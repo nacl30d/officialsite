@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "check": "biome check &&  astro check && tsc --noEmit",
+    "check": "biome check && astro check && tsc --noEmit",
     "fix": "biome check --fix --unsafe",
     "dev": "astro dev",
     "start": "astro dev",
