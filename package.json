@@ -9,8 +9,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "prepare": "husky install"
+    "astro": "astro"
   },
   "packageManager": "pnpm@10.15.0",
   "dependencies": {
@@ -20,8 +19,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.3",
-    "@types/node": "^18.14.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.2"
+    "@types/node": "^18.14.0"
   }
 }

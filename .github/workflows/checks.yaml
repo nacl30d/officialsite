@@ -17,8 +17,6 @@ jobs:
 
       - name: Resolve Dependencies
         run: pnpm install --frozen-lockfile
-        env:
-          HUSKY: 0
 
       - name: Check code
         run: pnpm run check
@@ -32,8 +30,6 @@ jobs:
 
       - name: Resolve Dependencies
         run: pnpm install --frozen-lockfile
-        env:
-          HUSKY: 0
 
       - name: Build
         run: pnpm run build
