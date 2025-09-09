@@ -12,6 +12,7 @@
         "astro": "astro",
         "prepare": "husky install"
     },
+    "packageManager": "pnpm@10.15.0",
     "dependencies": {
         "@astrojs/tailwind": "^3.0.1",
         "astro": "^2.0.13",
