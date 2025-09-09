@@ -1,46 +1,46 @@
 {
-    "site": {
-        "title": "NaCl30d",
-        "copyright": "© 2023 Daiki Shiozawa",
-        "googleAnalytics": {
-            "measurementId": "G-RL7D4SSB2K"
-        },
-        "twitter": {
-            "id": "nacl30d"
-        }
+  "site": {
+    "title": "NaCl30d",
+    "copyright": "© 2023 Daiki Shiozawa",
+    "googleAnalytics": {
+      "measurementId": "G-RL7D4SSB2K"
     },
-    "about": {
-        "gravatar": {
-            "id": "me@nacl30d.com"
-        },
-        "avatarUrl": "/images/author.jpg",
-        "author": "Daiki Shiozawa",
-        "descriptions": ["Web Application Developer"],
-        "socials": [
-            {
-                "name": "GitHub",
-                "slug": "github",
-                "url": "https://github.com/nacl30d",
-                "weight": 1
-            },
-            {
-                "name": "Keybase",
-                "slug": "keybase",
-                "url": "https://keybase.io/nacl30d",
-                "weight": 2
-            },
-            {
-                "name": "LinkedIn",
-                "slug": "linkedin",
-                "url": "https://www.linkedin.com/in/nacl30d/",
-                "weight": 4
-            },
-            {
-                "name": "Twitter",
-                "slug": "twitter",
-                "url": "https://twitter.com/nacl30d",
-                "weight": 3
-            }
-        ]
+    "twitter": {
+      "id": "nacl30d"
     }
+  },
+  "about": {
+    "gravatar": {
+      "id": "me@nacl30d.com"
+    },
+    "avatarUrl": "/images/author.jpg",
+    "author": "Daiki Shiozawa",
+    "descriptions": ["Web Application Developer"],
+    "socials": [
+      {
+        "name": "GitHub",
+        "slug": "github",
+        "url": "https://github.com/nacl30d",
+        "weight": 1
+      },
+      {
+        "name": "Keybase",
+        "slug": "keybase",
+        "url": "https://keybase.io/nacl30d",
+        "weight": 2
+      },
+      {
+        "name": "LinkedIn",
+        "slug": "linkedin",
+        "url": "https://www.linkedin.com/in/nacl30d/",
+        "weight": 4
+      },
+      {
+        "name": "Twitter",
+        "slug": "twitter",
+        "url": "https://twitter.com/nacl30d",
+        "weight": 3
+      }
+    ]
+  }
 }

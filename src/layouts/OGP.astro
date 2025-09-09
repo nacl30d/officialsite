@@ -1,26 +1,27 @@
 ---
-import crypto from 'crypto';
-import { site, about } from '../config.json';
+import crypto from "node:crypto";
+import { about, site } from "../config.json";
 
-export type OgpType = 'website' | 'blog' | 'article';
+export type OgpType = "website" | "blog" | "article";
 
 interface Props {
-    type: OgpType;
-    title: string;
-    imageUrl?: string;
+  type: OgpType;
+  title: string;
+  imageUrl?: string;
 }
 
 const props = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.url);
 
-const md5 = (contents: string) => crypto.createHash('md5').update(contents).digest('hex');
+const md5 = (contents: string) =>
+  crypto.createHash("md5").update(contents).digest("hex");
 const defaultImageUrl =
-    about.avatarUrl && about.gravatar
-        ? new URL(about.avatarUrl, Astro.url)
-        : about.gravatar
-        ? `https://www.gravatar.com/avatar/${md5(about.gravatar.id)}?s=240&d=mp`
-        : '';
+  about.avatarUrl && about.gravatar
+    ? new URL(about.avatarUrl, Astro.url)
+    : about.gravatar
+      ? `https://www.gravatar.com/avatar/${md5(about.gravatar.id)}?s=240&d=mp`
+      : "";
 ---
 
 <meta property="og:url" content={canonicalUrl} />

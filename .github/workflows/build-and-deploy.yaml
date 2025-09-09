@@ -21,23 +21,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v1
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .tool-versions
+          cache: 'pnpm'
 
       - name: Resolve Dependencies
-        run: bun install --frozen-lockfile
-        env:
-          HUSKY: 0
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: bun run build
+        run: pnpm run build
 
       - name: Publish to Cloudflare Pages
         id: deploy
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: nacl30d
-          directory: dist
-          # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          wranglerVersion: '3'
+          command: pages deploy ./dist --project-name=nacl30d

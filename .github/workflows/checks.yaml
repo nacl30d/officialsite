@@ -13,27 +13,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v1
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .tool-versions
+          cache: 'pnpm'
 
       - name: Resolve Dependencies
-        run: bun install --frozen-lockfile
-        env:
-          HUSKY: 0
+        run: pnpm install --frozen-lockfile
 
       - name: Check code
-        run: bun run lint
+        run: pnpm run check
 
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v1
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .tool-versions
+          cache: 'pnpm'
 
       - name: Resolve Dependencies
-        run: bun install --frozen-lockfile
-        env:
-          HUSKY: 0
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: bun run build
+        run: pnpm run build
