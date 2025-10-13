@@ -14,7 +14,7 @@
   "packageManager": "pnpm@10.18.2",
   "dependencies": {
     "@astrojs/tailwind": "^3.0.1",
-    "astro": "^4.16.19",
+    "astro": "^5.14.3",
     "tailwindcss": "^3.2.7"
   },
   "devDependencies": {
