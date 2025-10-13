@@ -8,6 +8,32 @@ on:
       - main
 
 jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .tool-versions
+          cache: ''
+          package-manager-cache: false
+
+      - name: Setup @akidosec/safe-chain
+        run: |
+          pnpm install -g @aikidosec/safe-chain@1.1.4
+          safe-chain setup-ci
+
+      - name: Check npm dependencies via installation
+        run: |
+            # Force download because packages are checked on download.
+            rm -rf $(pnpm store path)
+            pnpm install --frozen-lockfile
+
   lint:
     runs-on: ubuntu-latest
     steps:
