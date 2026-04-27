@@ -13,7 +13,7 @@ importers:
         version: 6.1.8(@types/node@24.12.2)(jiti@1.21.7)(rollup@4.60.1)(typescript@6.0.3)(yaml@2.8.2)
       tailwindcss:
         specifier: ^4.0.0
-        version: 4.2.2
+        version: 4.2.3
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.6
@@ -1462,8 +1462,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  tailwindcss@4.2.2:
-    resolution: {integrity: sha512-KWBIxs1Xb6NoLdMVqhbhgwZf2PGBpPEiwOqgI4pFIYbNTfBXiKYyWoTsXgBQ9WFg/OlhnvHaY+AEpW7wSmFo2Q==}
+  tailwindcss@4.2.3:
+    resolution: {integrity: sha512-fA/NX5gMf0ooCLISgB0wScaWgaj6rjTN2SVAwleURjiya7ITNkV+VMmoHtKkldP6CIZoYCZyxb8zP/e2TWoEtQ==}
 
   tiny-inflate@1.0.3:
     resolution: {integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==}
@@ -3501,7 +3501,7 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.6.0
 
-  tailwindcss@4.2.2: {}
+  tailwindcss@4.2.3: {}
 
   tiny-inflate@1.0.3: {}
 
